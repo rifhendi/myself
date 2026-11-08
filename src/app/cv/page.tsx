@@ -12,9 +12,7 @@ import {
   ArrowLeft, 
   Printer, 
   Mail, 
-  MapPin, 
-  CheckCircle2, 
-  Download 
+  MapPin 
 } from "lucide-react";
 
 export default function CVPage() {

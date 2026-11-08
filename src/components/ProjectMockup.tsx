@@ -5,10 +5,8 @@ import {
   ShieldCheck, 
   Clock, 
   MapPin, 
-  AlertTriangle, 
   CheckCircle2, 
   Terminal, 
-  Cpu, 
   Barcode 
 } from "lucide-react";
 

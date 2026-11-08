@@ -56,9 +56,10 @@ export default function Contact() {
       setStatus("success");
       setResponseMsg(data.message || "Pesan Anda berhasil dikirim! Saya akan segera merespons.");
       setFormData({ name: "", email: "", subject: "", message: "", honeypot: "" });
-    } catch (err: any) {
+    } catch (err: unknown) {
       setStatus("error");
-      setResponseMsg(err.message || "Terjadi kesalahan koneksi. Silakan coba kembali.");
+      const errorMessage = err instanceof Error ? err.message : "Terjadi kesalahan koneksi. Silakan coba kembali.";
+      setResponseMsg(errorMessage);
     }
   };
 

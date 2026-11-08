@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { navLinks, personalInfo } from "@/data/portfolio";
+import { navLinks } from "@/data/portfolio";
 import ThemeToggle from "./ThemeToggle";
 import { FileText, Menu, X, ArrowUpRight } from "lucide-react";
 

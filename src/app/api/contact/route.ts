@@ -147,7 +147,7 @@ export async function POST(req: NextRequest) {
         message: "Pesan berhasil diterima! (Mode simulasi aktif: set RESEND_API_KEY di .env.local untuk pengiriman live ke vinorifhendi@gmail.com).",
       });
     }
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error("Error in contact route:", err);
     return NextResponse.json(
       { error: "Terjadi kesalahan internal pada server. Silakan coba beberapa saat lagi." },
