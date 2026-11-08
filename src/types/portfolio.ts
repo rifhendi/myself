@@ -1,27 +1,35 @@
 export type ProjectCategory = 
   | "All" 
   | "IT Support & Infrastructure" 
-  | "Software Development" 
-  | "Cybersecurity";
+  | "Software Development";
 
 export type ProjectStatus = "Completed" | "In Active Development" | "Production" | "Live";
+
+export type MockupType = 
+  | "assetflow" 
+  | "werecap" 
+  | "mainpro" 
+  | "livestock360" 
+  | "virelist" 
+  | "absensi" 
+  | "portfolio";
 
 export interface Project {
   id: string;
   slug: string;
   title: string;
-  category: "IT Support & Infrastructure" | "Software Development" | "Cybersecurity";
+  category: "IT Support & Infrastructure" | "Software Development";
   shortDescription: string;
   problem: string;
   solution: string;
   features: string[];
   techStack: string[];
   status: ProjectStatus;
-  githubUrl?: string;
+  githubUrl: string;
   liveUrl?: string;
   featured?: boolean;
   date: string;
-  mockupType: "asset-management" | "attendance" | "helpdesk" | "security" | "portfolio";
+  mockupType: MockupType;
 }
 
 export interface ExperienceItem {
@@ -31,7 +39,7 @@ export interface ExperienceItem {
   division?: string;
   period: string;
   location: string;
-  type: string; // "Full-time", "Contract", "On-site"
+  type: string;
   summary: string;
   responsibilities: string[];
   achievements: string[];
@@ -83,4 +91,3 @@ export interface PersonalInfo {
   };
   education: EducationItem;
 }
-

@@ -167,7 +167,7 @@ export default function CVPage() {
           </h2>
 
           <div className="space-y-3">
-            {projectsData.slice(0, 3).map((p) => (
+            {projectsData.slice(0, 4).map((p) => (
               <div key={p.id} className="text-xs">
                 <div className="flex justify-between items-baseline font-bold text-slate-900">
                   <span>{p.title}</span>

@@ -10,8 +10,7 @@ import SectionHeading from "./SectionHeading";
 const categories: ProjectCategory[] = [
   "All",
   "IT Support & Infrastructure",
-  "Software Development",
-  "Cybersecurity"
+  "Software Development"
 ];
 
 export default function Projects() {
@@ -27,9 +26,9 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
           <SectionHeading
-            badge="Portfolio Proyek"
+            badge="GitHub Repositories"
             title="Sistem & Proyek Pilihan"
-            description="Kumpulan solusi terapan dalam manajemen aset IT site, platform helpdesk berstandar SLA, sistem absensi operasional, dan asesmen keamanan jaringan."
+            description="Koleksi sistem enterprise dan proyek rekayasa perangkat lunak nyata dari repositori GitHub @rifhendi: dari manajemen aset BAST, sistem absensi EOS SIG Site Rembang, industrial CMMS AI, hingga smart GPS tracking SaaS."
           />
 
           {/* Filter Pills */}

@@ -2,133 +2,181 @@ import { Project } from "@/types/portfolio";
 
 export const projectsData: Project[] = [
   {
-    id: "proj-asset-mgmt",
-    slug: "it-asset-management-system",
-    title: "IT Asset Management System",
+    id: "proj-assetflow",
+    slug: "assetflow",
+    title: "AssetFlow — Enterprise Asset & Lifecycle Management",
     category: "IT Support & Infrastructure",
     shortDescription:
-      "Sistem berbasis web enterprise untuk pelacakan siklus hidup hardware, riwayat perbaikan, barcode tagging, dan audit kepemilikan aset IT di lingkungan operasional site industri.",
+      "Sistem enterprise terpadu untuk pencatatan, distribusi, pemeliharaan, dan siklus hidup (lifecycle) aset korporat dengan generator Berita Acara Serah Terima (BAST) otomatis, audit trail atomik, dan pelabelan QR Code.",
     problem:
-      "Pencatatan inventaris perangkat IT (ratusan PC, printer industri, switch jaringan, dan laptop) di lokasi site pabrik yang sebelumnya dilakukan secara manual via spreadsheet rentan terhadap inkonsistensi data, hilangnya riwayat maintenance perangkat, dan kesulitan saat proses audit aset tahunan.",
+      "Manajemen ratusan unit aset IT dan perangkat operasional tanpa sistem terpusat seringkali memicu kehilangan jejak kepemilikan, ketidakjelasan dokumen serah terima resmi (BAST), serta tingginya deviasi inventaris saat audit tahunan atau saat proses offboarding karyawan (pensiun/resign/mutasi).",
     solution:
-      "Membangun sistem sentralisasi inventaris berbasis web dengan fitur auto-generated barcode/QR code, tracking perpindahan unit antar-divisi, pencatatan log perbaikan berkala, peringatan masa garansi, serta pelaporan otomatis siap cetak untuk tim manajemen.",
+      "Membangun platform enterprise berbasis Next.js 14 App Router dan transaksi PostgreSQL atomik yang mengotomasi alur penyerahan (checkout), pengembalian (check-in), pelabelan QR Code fisik, riwayat maintenance, dan penerbitan dokumen hukum BAST resmi siap cetak.",
     features: [
-      "Pelacakan siklus hidup perangkat lengkap: Pengadaan, Alokasi User/Ruangan, Maintenance, hingga Decommission",
-      "QR Code / Barcode generator unik untuk setiap item hardware guna mempercepat audit fisik di lapangan",
-      "Logbook riwayat servis & perbaikan perangkat beserta estimasi biaya dan pergantian sparepart",
-      "Dashboard analitik real-time menampilkan distribusi status aset (Operasional, Rusak, Dalam Perbaikan, Cadangan)",
-      "Ekspor laporan komprehensif ke format PDF dan Excel spreadsheet untuk keperluan audit internal"
+      "Generator Berita Acara Serah Terima (BAST) otomatis berstandar korporat Indonesia untuk checkout & return aset",
+      "Asset Checkout & Check-in Wizard 5-langkah dengan transaksi PostgreSQL atomik",
+      "Tracking siklus hidup aset lengkap: AVAILABLE, ASSIGNED, MAINTENANCE, RETIRED, LOST, DISPOSED",
+      "Executive Dashboard dengan grafik interaktif Recharts (distribusi status aset, valuasi nilai investasi)",
+      "QR Code Asset Label generator untuk inventarisasi fisik di lapangan",
+      "Ekspor dan impor massal database aset ke format Excel (.xlsx)"
     ],
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma ORM", "Chart.js"],
-    status: "Completed",
-    githubUrl: "https://github.com/rifhendi/it-asset-management-system",
-    liveUrl: "https://asset-management-demo.vercel.app",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma ORM", "Recharts"],
+    status: "Production",
+    githubUrl: "https://github.com/rifhendi/AssetFlow",
     featured: true,
-    date: "2024",
-    mockupType: "asset-management"
+    date: "2024 - 2026",
+    mockupType: "assetflow"
   },
   {
-    id: "proj-site-attendance",
-    slug: "site-attendance-management-system",
-    title: "Site Attendance Management System",
+    id: "proj-werecap",
+    slug: "werecap",
+    title: "We-recap — Site Attendance Management System",
+    category: "IT Support & Infrastructure",
+    shortDescription:
+      "Aplikasi web administrasi enterprise berbasis .NET 10 LTS dan PostgreSQL untuk mengelola, memantau, dan menghasilkan laporan resmi absensi personil Engineer On Site (EOS) pada Manage Service SIG Site Rembang.",
+    problem:
+      "Pencatatan presensi dan pembuatan laporan kerja personil Engineer On Site (EOS) di area site industri pabrik semen membutuhkan keandalan operasional tinggi, rekapitulasi shift 24/7 yang presisi, dan basis data tunggal yang persisten serta sinkron antar perangkat tanpa latensi.",
+    solution:
+      "Merancang sistem web arsitektur monolitik modular berstandar enterprise dengan .NET 10 LTS dan PostgreSQL sebagai single source of truth, menyediakan pencatatan presensi real-time, validasi shift kerja, dan rekap laporan resmi instan.",
+    features: [
+      "Manajemen personil Engineer On Site (EOS) terpusat untuk Manage Service SIG Site Rembang",
+      "Single source of truth dengan PostgreSQL persisten untuk sinkronisasi multi-device (PC kantor, laptop, HP)",
+      "Tracking shift kerja dinamis dan kehadiran personil teknis site harian",
+      "Generator laporan resmi absensi personil siap unduh dan cetak untuk manajemen",
+      "Arsitektur monolitik modular performa tinggi dengan .NET 10 LTS"
+    ],
+    techStack: [".NET 10 LTS", "C#", "PostgreSQL", "Tailwind CSS", "Modular Monolith"],
+    status: "Production",
+    githubUrl: "https://github.com/rifhendi/We-recap",
+    featured: true,
+    date: "2024 - 2026",
+    mockupType: "werecap"
+  },
+  {
+    id: "proj-mainpro",
+    slug: "mainpro",
+    title: "MaintAI (MainPRO) — AI-Powered Preventive Maintenance Platform",
+    category: "IT Support & Infrastructure",
+    shortDescription:
+      "Industrial Computerized Maintenance Management System (CMMS) yang mengintegrasikan Google Gemini AI dan PostgreSQL untuk penjadwalan pemeliharaan preventif mesin, pelacakan KPI, dan manajemen Work Order.",
+    problem:
+      "Kegagalan mesin industri yang tidak terduga dan penjadwalan pemeliharaan preventif yang masih manual sering menimbulkan downtime produksi berbiaya mahal serta ketiadaan analisis akar masalah (root cause analysis) yang komprehensif.",
+    solution:
+      "Mengintegrasikan generative AI (Google Gemini) dengan sistem CMMS industri untuk menganalisis anomali operasional, memprediksi interval servis optimal, mengkalkulasi metrik keandalan mesin (MTBF & MTTR), dan memandu teknisi dengan rekomendasi langkah perbaikan.",
+    features: [
+      "AI Predictive Maintenance Advisor menggunakan Google Gemini AI untuk analisis risiko mesin",
+      "Dynamic KPIs & Live Analytics via ECharts (MTBF, MTTR, PM Compliance rate)",
+      "Work Order lifecycle management: Penugasan teknisi, prioritas kendala, dan log perbaikan",
+      "Tracking histori servis aset mesin dan penggunaan suku cadang (spare parts)",
+      "Sistem dokumentasi SOP pemeliharaan preventif terpusat"
+    ],
+    techStack: ["TypeScript", "Next.js", "React", "Google Gemini AI", "PostgreSQL", "ECharts", "Tailwind CSS"],
+    status: "Production",
+    githubUrl: "https://github.com/rifhendi/MainPRO",
+    featured: true,
+    date: "2024 - 2026",
+    mockupType: "mainpro"
+  },
+  {
+    id: "proj-livestock360",
+    slug: "livestock360",
+    title: "Livestock360 — Smart SaaS Real-Time Livestock GPS Monitoring",
     category: "Software Development",
     shortDescription:
-      "Aplikasi manajemen absensi dan penjadwalan rotasi shift operasional site yang mendukung verifikasi berbasis lokasi, rekapitulasi lembur, dan ekspor data presensi instan.",
+      "Platform Smart SaaS untuk memantau kesehatan, status vitalitas, dan koordinat geografis ternak secara real-time menggunakan teknologi GPS Tracker & Geofencing dengan simulator engine bawaan.",
     problem:
-      "Kebutuhan operasional site industri dengan skema shift 24/7 membutuhkan sistem presensi yang presisi, tahan terhadap manipulasi lokasi, dan mampu mengotomatisasi kalkulasi jam kerja, keterlambatan, dan lembur secara transparan tanpa beban administrasi manual.",
+      "Pemantauan ternak pada area peternakan terbuka skala luas rentan terhadap hewan keluar zona aman (geofence), pencurian, serta keterlambatan deteksi penurunan kondisi vitalitas hewan.",
     solution:
-      "Mengembangkan aplikasi web responsif dengan integrasi geofencing koordinat GPS area site, validasi sesi dinamis, penjadwalan shift tim teknis lapangan, serta integrasi rekap data kehadiran yang langsung terhubung ke dashboard supervisor.",
+      "Membangun arsitektur Clean Architecture (Repository & Service Pattern) untuk memproses telemetri GPS real-time, perimeter geofencing otomatis dengan peringatan bahaya instan, serta simulator engine bawaan untuk menguji pergerakan ratusan ternak secara dinamis.",
     features: [
-      "Verifikasi kehadiran berbasis Geofencing radius koordinat lokasi site dengan toleransi akurat",
-      "Pengaturan shift dinamis (Shift Pagi, Sore, Malam, Normal) beserta delegasi jadwal mingguan/bulanan",
-      "Modul pengajuan izin, cuti, dan surat tugas teknisi secara digital dengan multi-level approval",
-      "Perhitungan otomatis jam kerja efektif, akumulasi keterlambatan, dan jam lembur (overtime)",
-      "Dashboard rekapitulasi real-time dengan filter departemen dan ekspor laporan terperinci"
+      "Peta pemantauan telemetri real-time dengan Leaflet GIS & OpenStreetMap",
+      "Poligonal Geofencing radius dengan automatic boundary alert",
+      "Built-in GPS Movement Simulator (kecepatan 0.5x - 10x multiplier) untuk simulasi pergerakan",
+      "Dasbor analitik kesehatan, berat badan, dan profil ternak lengkap",
+      "Ekspor laporan kepatuhan dan histori telemetri ke format PDF dan Excel"
     ],
-    techStack: ["React.js", "TypeScript", "Node.js", "Express", "MySQL", "Tailwind CSS"],
-    status: "Completed",
-    githubUrl: "https://github.com/rifhendi/site-attendance-system",
-    liveUrl: "https://site-attendance-demo.vercel.app",
-    featured: true,
-    date: "2024",
-    mockupType: "attendance"
-  },
-  {
-    id: "proj-it-helpdesk",
-    slug: "it-helpdesk-management-system",
-    title: "IT Helpdesk & SLA Management System",
-    category: "IT Support & Infrastructure",
-    shortDescription:
-      "Platform ticketing insiden teknis terpadu untuk tim IT Support Tier 1/2 dengan countdown SLA real-time, kategorisasi otomatis, dan basis pengetahuan solusi mandiri.",
-    problem:
-      "Permintaan bantuan teknis yang masuk melalui pesan instan acak seringkali tercecer, tidak terpantau waktu penyelesaiannya, dan menyulitkan evaluasi performa layanan IT serta identifikasi masalah hardware/software yang berulang.",
-    solution:
-      "Mendesain sistem ticketing terstruktur di mana setiap pelaporan karyawan memiliki ID tiket unik, prioritas (Low, Medium, High, Critical), timer SLA otomatis, fitur assignment teknisi, dan pencatatan histori perbaikan yang menjadi Knowledge Base terpusat.",
-    features: [
-      "Portal pembuatan tiket yang intuitif bagi end-user dengan upload tangkapan layar kendala",
-      "SLA Timer & Warning Indicator aktif untuk mencegah keterlambatan penanganan insiden operasional",
-      "Papan Kanban interaktif bagi teknisi IT Support untuk memantau status (Open, In Progress, Pending, Resolved)",
-      "Knowledge Base terintegrasi: Solusi cepat untuk masalah berulang (printer jam, reset sandi, network reconnect)",
-      "Statistik bulanan: Rata-rata waktu respons (MTTA), waktu penyelesaian (MTTR), dan kepuasan pengguna (CSAT)"
-    ],
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "RESTful API", "PostgreSQL", "Lucide React"],
-    status: "Completed",
-    githubUrl: "https://github.com/rifhendi/it-helpdesk-system",
-    liveUrl: "https://helpdesk-demo.vercel.app",
-    featured: true,
-    date: "2023 - 2024",
-    mockupType: "helpdesk"
-  },
-  {
-    id: "proj-security-assessment",
-    slug: "security-assessment-platform",
-    title: "Network Security & Vulnerability Assessment Platform",
-    category: "Cybersecurity",
-    shortDescription:
-      "Platform dashboard pemantauan keamanan jaringan internal untuk memvisualisasikan hasil pemindaian Nmap, mengidentifikasi port rentan, dan memandu langkah perbaikan (remediation checklist).",
-    problem:
-      "File luaran hasil pemindaian jaringan dalam format XML atau teks mentah seringkali memakan waktu lama untuk dianalisis oleh tim IT internal, sehingga konfigurasi port terbuka yang berisiko tidak segera tertangani.",
-    solution:
-      "Membangun parser dan dashboard visual yang membaca hasil audit port jaringan, mencocokkannya dengan database kerentanan umum (CVE & OWASP recommendations), serta menyajikan panduan hardening langkah-demi-langkah bagi administrator sistem.",
-    features: [
-      "Visualisasi topologi port dan service aktif pada subnet target dengan indikator level risiko",
-      "Pemeriksaan otomatis terhadap protokol tidak aman (misal Telnet tanpa enkripsi, SMBv1 rentan, default web credentials)",
-      "Checklist langkah hardening sistem operasi dan perangkat switch/router yang terverifikasi",
-      "Kalkulator skor risiko berdasarkan metrik CVSS untuk memprioritaskan penanganan celah keamanan kritis",
-      "Dokumentasi laporan audit keamanan siap pakai untuk standarisasi compliance operasional"
-    ],
-    techStack: ["Python", "FastAPI", "Next.js", "TypeScript", "Tailwind CSS", "Docker"],
-    status: "In Active Development",
-    githubUrl: "https://github.com/rifhendi/security-assessment-platform",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma ORM", "PostgreSQL", "Leaflet GIS"],
+    status: "Production",
+    githubUrl: "https://github.com/rifhendi/Livestock360",
     featured: false,
     date: "2024",
-    mockupType: "security"
+    mockupType: "livestock360"
   },
   {
-    id: "proj-personal-portfolio",
-    slug: "personal-portfolio",
+    id: "proj-virelist",
+    slug: "virelist",
+    title: "VIRELIST — Retro 8-bit Cellular Strategy Puzzle Game",
+    category: "Software Development",
+    shortDescription:
+      "Game puzzle strategi retro 8-bit bertema evolusi seluler primordial dengan 35 level tantangan bertingkat, sintesis audio chiptune prosedural, dan dukungan offline penuh (PWA).",
+    problem:
+      "Membangun game puzzle interaktif yang ringan, kaya mekanik strategi, dapat dimainkan lintas platform (desktop & smartphone) tanpa ketergantungan koneksi internet, serta menyajikan pengalaman audio-visual retro yang otentik.",
+    solution:
+      "Merancang game engine berbasis Phaser 3 dan procedural audio synthesizer via Web Audio API, dilengkapi mekanik evolusi morfologi dinamis (mengubah bentuk sel untuk adaptasi rintangan alam) dan arsitektur PWA siap-offline.",
+    features: [
+      "35 Level teka-teki strategis dengan rintangan bertingkat (arus air, danau magma, jurang kehampaan)",
+      "Sistem evolusi morfologi dinamis berbasis pengumpulan DNA primordial",
+      "Synthesizer audio chiptune 8-bit prosedural tanpa beban file audio eksternal",
+      "Sistem Undo & Snapshot instan untuk eksplorasi strategi tanpa frustrasi",
+      "Siap offline di HP (Android/iOS) dan PC sebagai Progressive Web App (PWA)"
+    ],
+    techStack: ["JavaScript", "Phaser 3", "Web Audio API", "Vite", "PWA"],
+    status: "Live",
+    githubUrl: "https://github.com/rifhendi/VIRELIST",
+    liveUrl: "https://rifhendi.github.io/VIRELIST/",
+    featured: false,
+    date: "2024",
+    mockupType: "virelist"
+  },
+  {
+    id: "proj-absensi-ms",
+    slug: "absensi-ms",
+    title: "Absensi MS — Employee Attendance & Overtime System",
+    category: "Software Development",
+    shortDescription:
+      "Sistem informasi absensi karyawan modern dengan kalkulasi lembur otomatis (overtime SPL), rekapitulasi kehadiran tim teknis site, dan generator ekspor spreadsheet profesional via ExcelJS.",
+    problem:
+      "Perhitungan jam kerja dan akumulasi lembur staf lapangan yang dilakukan manual sering memicu selisih kalkulasi serta memperlambat proses rekapitulasi laporan berkala bagi tim operasional.",
+    solution:
+      "Mengembangkan aplikasi web responsif dengan clean architecture TypeScript, mengotomatisasi rumus jam kerja efektif & lembur, serta menghasilkan file Excel formal dengan formatting rapi siap kirim.",
+    features: [
+      "Perhitungan otomatis akumulasi jam lembur (overtime) & keterlambatan karyawan",
+      "Visualisasi statistik kehadiran bulanan dengan ECharts",
+      "Generator ekspor file Excel profesional terformat via ExcelJS",
+      "Validasi sesi dinamis dan manajemen peran otorisasi karyawan",
+      "Desain antarmuka cepat dan responsif berbasis React, Vite, dan Tailwind CSS"
+    ],
+    techStack: ["React.js", "TypeScript", "Vite", "Node.js", "Express", "Tailwind CSS", "ExcelJS", "ECharts"],
+    status: "Completed",
+    githubUrl: "https://github.com/rifhendi/Absensi_MS",
+    featured: false,
+    date: "2024",
+    mockupType: "absensi"
+  },
+  {
+    id: "proj-myself",
+    slug: "myself",
     title: "Vino Rifhendi — Personal Portfolio & CV Platform",
     category: "Software Development",
     shortDescription:
-      "Website CV dan portfolio digital profesional dengan arsitektur modern Next.js App Router, integrasi formulir kontak email Resend, dan performa tinggi yang ramah SEO.",
+      "Website personal CV dan portfolio profesional dengan arsitektur modern Next.js App Router, integrasi formulir kontak email Resend, dan format CV standar eksekutif siap cetak A4.",
     problem:
-      "Kebutuhan akan representasi digital profesional yang merefleksikan keahlian ganda antara IT Support operasional, rekayasa perangkat lunak modern, dan antusiasme keamanan siber secara elegan tanpa desain generik.",
+      "Kebutuhan representasi digital profesional yang merefleksikan keahlian ganda antara IT Support operasional, rekayasa perangkat lunak modern, dan antusiasme keamanan siber secara elegan tanpa desain generik.",
     solution:
-      "Mendesain dan mengimplementasikan portfolio berbasis kode modular, desain editorial minimalis, penekanan pada keterbacaan teknis, dynamic project details, dan integrasi backend API route untuk komunikasi instan.",
+      "Mendesain dan mengimplementasikan portfolio berbasis kode modular, desain editorial minimalis, penekanan pada keterbacaan teknis, dynamic project details (SSG), dan integrasi backend API route untuk komunikasi instan.",
     features: [
-      "Arsitektur Next.js App Router dengan dukungan Turbopack dan TypeScript tipe kuat",
+      "Arsitektur Next.js 16 App Router dengan dukungan Turbopack dan TypeScript tipe kuat",
       "Sistem desain profesional tanpa dekorasi berlebihan, mengutamakan kenyamanan visual dan kontras",
       "Integrasi formulir kontak aman dengan validasi server-side dan API email Resend",
-      "Fitur pratinjau dan unduh CV langsung yang siap cetak dengan format terstandarisasi",
+      "Fitur pratinjau dan unduh CV langsung yang siap cetak format A4 di `/cv`",
       "Skor performa dan aksesibilitas tinggi, ramah SEO dengan Open Graph dan sitemap dinamis"
     ],
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Resend", "Lucide React"],
     status: "Live",
-    githubUrl: "https://github.com/rifhendi/portfolio",
+    githubUrl: "https://github.com/rifhendi/myself",
     liveUrl: "https://vinorifhendi.vercel.app",
     featured: false,
-    date: "2024",
+    date: "2024 - 2026",
     mockupType: "portfolio"
   }
 ];
-
