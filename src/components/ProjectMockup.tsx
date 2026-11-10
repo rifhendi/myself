@@ -1,16 +1,16 @@
 import React from "react";
 import { MockupType } from "@/types/portfolio";
-import { 
-  Server, 
-  HardDrive, 
-  Clock, 
-  CheckCircle2, 
-  Terminal, 
-  Barcode, 
-  Bot, 
-  Gamepad2, 
-  FileSpreadsheet, 
-  Radio 
+import {
+  Server,
+  HardDrive,
+  Clock,
+  CheckCircle2,
+  Terminal,
+  Barcode,
+  Bot,
+  Gamepad2,
+  FileSpreadsheet,
+  Radio
 } from "lucide-react";
 
 interface ProjectMockupProps {
@@ -39,7 +39,7 @@ export default function ProjectMockup({ type, title }: ProjectMockupProps) {
 
       {/* Mockup Interior by Type */}
       <div className="p-3.5 flex-1 flex flex-col justify-between bg-gradient-to-b from-slate-900 to-slate-950 overflow-hidden text-slate-300">
-        
+
         {/* 1. AssetFlow Mockup */}
         {type === "assetflow" && (
           <div className="space-y-2">

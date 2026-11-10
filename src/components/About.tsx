@@ -1,12 +1,12 @@
 import React from "react";
 import SectionHeading from "./SectionHeading";
-import { 
-  Laptop, 
-  Network, 
-  Layers, 
-  ShieldCheck, 
-  CheckCircle, 
-  GraduationCap 
+import {
+  Laptop,
+  Network,
+  Layers,
+  ShieldCheck,
+  CheckCircle,
+  GraduationCap
 } from "lucide-react";
 
 export default function About() {
@@ -15,7 +15,7 @@ export default function About() {
       icon: Laptop,
       title: "IT Support & Enterprise Operations",
       description:
-        "Memberikan dukungan teknis Tier 1 yang responsif untuk operasional site, menangani troubleshooting sistem operasi Windows/Linux, penggantian & perbaikan hardware, konfigurasi workstation, hingga peripheral industri."
+        "Memberikan dukungan teknis L1 yang responsif untuk operasional site, menangani troubleshooting sistem operasi Windows, konfigurasi workstation, hingga peripheral industri."
     },
     {
       icon: Network,
@@ -25,7 +25,7 @@ export default function About() {
     },
     {
       icon: Layers,
-      title: "IT Asset & Inventory Management",
+      title: "IT Asset Management",
       description:
         "Menerapkan tata kelola aset IT berbasis data terstruktur: pencatatan unit baru, pelabelan barcode/QR code unik, audit fisik berkala, pemeliharaan log servis, dan pemantauan masa garansi guna meminimalisir downtime."
     },
@@ -50,7 +50,7 @@ export default function About() {
           {/* Detailed Editorial Narrative (Cols 1-7) */}
           <div className="lg:col-span-7 space-y-5 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
             <p>
-              Saya adalah lulusan <strong>S1 Teknik Informatika</strong> dari <strong>Telkom University Purwokerto</strong> yang memiliki dedikasi kuat dalam memastikan keandalan ekosistem teknologi informasi. Saat ini saya berkontribusi aktif sebagai <strong>IT Support L1 di Kirana Team / SIG Site Rembang</strong>.
+              Saya adalah lulusan <strong>S1 Teknik Informatika</strong> dari <strong>Telkom University Purwokerto</strong> yang memiliki dedikasi kuat dalam memastikan keandalan ekosistem teknologi informasi. Saat ini saya berkontribusi aktif sebagai <strong>IT Support L1 On Site di PT Semen Gresik SIG Rembang</strong>.
             </p>
             <p>
               Bekerja di lingkungan industri operasional menuntut pemecahan masalah (troubleshooting) yang cepat, akurat, dan terukur. Saya terbiasa menangani tantangan teknis mulai dari kegagalan booting sistem operasi, anomali jaringan lokal pada area pabrik, hingga pemeliharaan armada printer dan PC kerja staf di bawah standar kepatuhan <em>Service Level Agreement (SLA)</em> yang ketat.
@@ -74,7 +74,7 @@ export default function About() {
               </div>
               <div className="flex items-center gap-2 p-2.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800">
                 <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
-                <span>Pencatatan Aset IT & Audit Terpadu</span>
+                <span>Pencatatan Aset IT</span>
               </div>
               <div className="flex items-center gap-2 p-2.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800">
                 <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />

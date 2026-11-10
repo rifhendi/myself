@@ -5,7 +5,7 @@ export const educationData: EducationItem = {
   institution: "Telkom University Purwokerto",
   faculty: "Fakultas Informatika",
   location: "Purwokerto, Jawa Tengah, Indonesia",
-  period: "2020 - 2024", // Editable study timeline placeholder
+  period: "2021 - 2025", // Editable study timeline placeholder
   status: "Lulus (Graduated)",
   description:
     "Menempuh pendidikan sarjana ilmu komputer dengan fokus mendalam pada rekayasa perangkat lunak, arsitektur jaringan komputer, sistem terdistribusi, serta prinsip-prinsip keamanan sistem informasi.",

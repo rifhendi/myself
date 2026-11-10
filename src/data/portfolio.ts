@@ -10,10 +10,10 @@ export const personalInfo: PersonalInfo = {
     "Software Developer",
     "Cybersecurity Enthusiast"
   ],
-  bio: "Praktisi teknologi informasi berlatar pendidikan S1 Teknik Informatika (Telkom University Purwokerto) dengan pengalaman langsung di lini operasional IT Support Tier 1 (Kirana Team / SIG Site Rembang). Terampil dalam penanganan perangkat keras/lunak, administrasi jaringan lokal, manajemen aset inventaris, serta pengembangan aplikasi web modern yang solutif dan aman.",
+  bio: "Praktisi teknologi informasi berlatar pendidikan S1 Teknik Informatika (Telkom University Purwokerto) dengan pengalaman langsung di lini operasional IT Support. Terampil dalam penanganan perangkat keras/lunak, administrasi jaringan lokal, manajemen IT aset, serta pengembangan aplikasi web modern yang solutif dan aman.",
   email: "vinorifhendi@gmail.com",
   github: "https://github.com/rifhendi",
-  linkedin: "https://linkedin.com/in/vinorifhendi", // Placeholder profil yang rapi
+  linkedin: "https://www.linkedin.com/in/vino-rifhendi-setiawan-296101285/", // Placeholder profil yang rapi
   location: "Jawa Tengah, Indonesia",
   status: {
     available: true,
@@ -46,7 +46,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     platform: "LinkedIn",
-    url: "https://linkedin.com/in/vinorifhendi",
+    url: "https://www.linkedin.com/in/vino-rifhendi-setiawan-296101285/",
     label: "linkedin.com/in/vinorifhendi",
     icon: "Linkedin"
   }
@@ -55,10 +55,10 @@ export const socialLinks: SocialLink[] = [
 export const aboutHighlights = [
   {
     title: "IT Support & Infrastructure",
-    description: "Berpengalaman menangani operasional harian IT industri: diagnosa workstation, instalasi OS enterprise, pemeliharaan printer, penanganan tiket helpdesk, dan kepatuhan SLA."
+    description: "Berpengalaman menangani operasional harian IT industri: troubleshooting, instalasi OS enterprise, pemeliharaan printer, penanganan tiket helpdesk, dan kepatuhan SLA."
   },
   {
-    title: "Asset & Inventory Management",
+    title: "IT Asset Management",
     description: "Menerapkan pencatatan terstruktur terhadap siklus hidup perangkat keras, barcode tagging, verifikasi fisik, dan pencegahan kehilangan aset teknologi di site kerja."
   },
   {

@@ -7,9 +7,9 @@ export const skillCategories: SkillCategory[] = [
     description: "Pemeliharaan hardware, troubleshooting sistem operasi, penanganan insiden helpdesk, dan siklus hidup aset IT enterprise.",
     skills: [
       { name: "Hardware Diagnostics & Assembly", level: "Core", description: "PC/Laptop teardown, component testing, RAM/Storage upgrade" },
-      { name: "OS Troubleshooting (Windows & Linux)", level: "Core", description: "Kernel errors, registry, services, boot repair, driver management" },
+      { name: "OS Troubleshooting (Windows)", level: "Core", description: "Kernel errors, registry, services, boot repair, driver management" },
       { name: "Printer & Peripheral Maintenance", level: "Core", description: "Network printer, thermal printer, scanner setup, spooler fix" },
-      { name: "IT Asset Lifecycle & Inventory Management", level: "Core", description: "Tagging, tracking, procurement record, hardware audit" },
+      { name: "IT Asset Management", level: "Core", description: "Tagging, tracking, procurement record, hardware audit" },
       { name: "IT Helpdesk & SLA Incident Handling", level: "Core", description: "Ticket categorization, remote resolution, escalation protocol" },
       { name: "Data Backup & Disaster Recovery", level: "Core", description: "Local backup, image ghosting, storage redundancy recovery" }
     ]

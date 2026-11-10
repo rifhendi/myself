@@ -24,7 +24,7 @@ export const projectsData: Project[] = [
     status: "Production",
     githubUrl: "https://github.com/rifhendi/AssetFlow",
     featured: true,
-    date: "2024 - 2026",
+    date: "2026 - Sekarang",
     mockupType: "assetflow"
   },
   {
@@ -49,7 +49,7 @@ export const projectsData: Project[] = [
     status: "Production",
     githubUrl: "https://github.com/rifhendi/We-recap",
     featured: true,
-    date: "2024 - 2026",
+    date: "2026",
     mockupType: "werecap"
   },
   {
@@ -74,7 +74,7 @@ export const projectsData: Project[] = [
     status: "Production",
     githubUrl: "https://github.com/rifhendi/MainPRO",
     featured: true,
-    date: "2024 - 2026",
+    date: "2026",
     mockupType: "mainpro"
   },
   {
@@ -99,7 +99,7 @@ export const projectsData: Project[] = [
     status: "Production",
     githubUrl: "https://github.com/rifhendi/Livestock360",
     featured: false,
-    date: "2024",
+    date: "2026",
     mockupType: "livestock360"
   },
   {
@@ -125,7 +125,7 @@ export const projectsData: Project[] = [
     githubUrl: "https://github.com/rifhendi/VIRELIST",
     liveUrl: "https://rifhendi.github.io/VIRELIST/",
     featured: false,
-    date: "2024",
+    date: "2026",
     mockupType: "virelist"
   },
   {
@@ -150,7 +150,7 @@ export const projectsData: Project[] = [
     status: "Completed",
     githubUrl: "https://github.com/rifhendi/Absensi_MS",
     featured: false,
-    date: "2024",
+    date: "2026",
     mockupType: "absensi"
   },
   {
@@ -176,7 +176,7 @@ export const projectsData: Project[] = [
     githubUrl: "https://github.com/rifhendi/myself",
     liveUrl: "https://vinorifhendi.vercel.app",
     featured: false,
-    date: "2024 - 2026",
+    date: "2026",
     mockupType: "portfolio"
   }
 ];

@@ -121,7 +121,9 @@ export async function POST(req: NextRequest) {
       if (emailResult.error) {
         console.error("Resend delivery error:", emailResult.error);
         return NextResponse.json(
-          { error: "Gagal mengirimkan email melalui gateway Resend. Silakan hubungi langsung ke vinorifhendi@gmail.com." },
+          { 
+            error: `Resend error: ${emailResult.error.message || "Gagal mengirimkan email."}` 
+          },
           { status: 500 }
         );
       }
